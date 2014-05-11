@@ -16,13 +16,19 @@ Installation
 **via 'curl'**
 
 ```bash
-curl -L https://raw.github.com/kepbod/prezto/master/tools/bootstrap.sh | bash
+bash <(curl -L https://raw.github.com/kepbod/prezto/master/tools/bootstrap.sh) -i
 ```
 
 **via 'wget'**
 
 ```bash
-wget --no-check-certificate https://raw.github.com/kepbod/prezto/master/tools/bootstrap.sh -O - | bash
+bash <(wget --no-check-certificate https://raw.github.com/kepbod/prezto/master/tools/bootstrap.sh -O -)
+```
+
+Updating
+
+```bash
+bash $HOME/.zprezto/setup.sh -n
 ```
 
 Resources
