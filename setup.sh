@@ -25,32 +25,32 @@ die()
 }
 
 logo() {
-    printf color_print "Thanks for installing prezto!"
-    printf color_print "                     _        "
-    printf color_print "                    | |       "
-    printf color_print "  _ __  _ __ ___ ___| |_ ___  "
-    printf color_print " | '_ \| '__/ _ \_  / __/ _ \ "
-    printf color_print " | |_) | | |  __// /| || (_) |"
-    printf color_print " | .__/|_|  \___/___|\__\___/ "
-    printf color_print " | |                          "
-    printf color_print " |_|                          "
+    color_print "Thanks for installing prezto!"
+    color_print "                     _        "
+    color_print "                    | |       "
+    color_print "  _ __  _ __ ___ ___| |_ ___  "
+    color_print " | '_ \| '__/ _ \_  / __/ _ \ "
+    color_print " | |_) | | |  __// /| || (_) |"
+    color_print " | .__/|_|  \___/___|\__\___/ "
+    color_print " | |                          "
+    color_print " |_|                          "
 }
 
 require() {
-    printf color_print "Checking requirements for prezto..."
-    printf color_print "Checking if zsh exists..."
+    color_print "Checking requirements for prezto..."
+    color_print "Checking if zsh exists..."
     which zsh || die "No zsh installed!\nPlease install zsh from http://http://www.zsh.org/"
-    printf color_print "Checking if git exists..."
+    color_print "Checking if git exists..."
     which git || die "No git installed!\nPlease install git from http://git-scm.com/downloads/"
 }
 
 backup() {
-    printf color_print "Backing up current zsh config..."
+    color_print "Backing up current zsh config..."
     for i in $HOME/.z{login,logout,preztorc,profile,shenv,shrc}; do [ -e $i ] && mv $i $i.backup; done
 }
 
 install() {
-    printf color_print "Cloning prezto..."
+    color_print "Cloning prezto..."
     rm -rf $HOME/.zprezto
     git clone --recursive git://github.com/kepbod/prezto.git $HOME/.zprezto
     for i in $HOME/.zprezto/runcoms/z{login,logout,preztorc,profile,shenv}; do
@@ -58,7 +58,7 @@ install() {
     done
     cp $HOME/.zprezto/runcoms/zshrc $HOME/.zshrc
     chsh -s /bin/zsh || warn "Failed to change default shell. Please change it manually!"
-    printf color_print "prezto has been installed. Please open a new zsh terminal window or tab to enjoy it!"
+    color_print "prezto has been installed. Please open a new zsh terminal window or tab to enjoy it!"
 }
 
 update() {
