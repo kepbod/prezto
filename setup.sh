@@ -15,7 +15,7 @@ color_print() {
 
 warn()
 {
-    printf color_print "$1" >&2
+    color_print "$1" >&2
 }
 
 die()
