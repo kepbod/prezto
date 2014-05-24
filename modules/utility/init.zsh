@@ -58,6 +58,8 @@ alias po='popd'
 alias pu='pushd'
 alias rm="${aliases[rm]:-rm} -i"
 alias type='type -a'
+alias vi='vim -X'
+alias tmux='tmux -2'
 
 # ls
 if is-callable 'dircolors'; then
