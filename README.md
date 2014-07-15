@@ -10,6 +10,8 @@ modifications to make it more easy and beautiful to use in the [iztv][2] framewo
 It will be synchronized with the Prezto master branch to obtain the newest
 features.
 
+![snapshot](https://raw.githubusercontent.com/kepbod/prezto/master/snapshot.jpg)
+
 Installation
 ---------
 
