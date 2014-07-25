@@ -39,9 +39,9 @@ logo() {
 require() {
     color_print "Checking requirements for prezto..."
     color_print "Checking if zsh exists..."
-    which zsh || die "No zsh installed!\nPlease install zsh from http://http://www.zsh.org/"
+    which zsh || die "No zsh installed!"\n"Please install zsh from http://http://www.zsh.org/"
     color_print "Checking if git exists..."
-    which git || die "No git installed!\nPlease install git from http://git-scm.com/downloads/"
+    which git || die "No git installed!"\n"Please install git from http://git-scm.com/downloads/"
 }
 
 backup() {
