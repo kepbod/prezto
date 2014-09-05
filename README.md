@@ -24,7 +24,7 @@ bash <(curl -L https://raw.githubusercontent.com/kepbod/prezto/master/setup.sh) 
 **via 'wget'**
 
 ```bash
-bash <(wget --no-check-certificate https://raw.githubusercontent.com/kepbod/prezto/master/setup.sh -O -)
+bash <(wget --no-check-certificate https://raw.githubusercontent.com/kepbod/prezto/master/setup.sh -O -) -i
 ```
 
 Updating
