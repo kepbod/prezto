@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 help() {
-    echo "setup.sh -- setup ivim"
+    echo "setup.sh -- setup prezto"
     echo "Usage: setup.sh -i/-n"
-    echo "-i -- install ivim"
-    echo "-n -- update ivim"
+    echo "-i -- install prezto"
+    echo "-n -- update prezto"
     exit 0
 }
 
