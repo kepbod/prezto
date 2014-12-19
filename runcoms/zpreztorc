@@ -3,6 +3,7 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   Xiao-Ou Zhang <kepbod@gmail.com>
 #
 
 #
@@ -31,8 +32,8 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'editor' \
   'git' \
+  'ssh' \
   'history' \
-  'helper' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt' \
