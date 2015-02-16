@@ -31,6 +31,11 @@ function prompt_kepbod_precmd {
   if (( $+functions[git-info] )); then
     git-info
   fi
+
+  # Get Python environment information.
+  if (( $+functions[python-info] )); then
+    python-info
+  fi
 }
 
 function prompt_kepbod_setup {
@@ -69,9 +74,12 @@ function prompt_kepbod_setup {
     'prompt' ' %F{blue}git%f$(coalesce "%b" "%p" "%c")%s' \
     'rprompt' '%A%B%S%a%d%m%r%U%u'
 
+  # Set python-info parameters.
+  zstyle ':prezto:module:python:info:virtualenv' format '%F{blue}env%f:%F{red}%v%f'
+
   # Define prompts.
   PROMPT='
-%B%F{green}%n%f%b at %B%F{yellow}%m%f%b in %B%F{magenta}${_prompt_kepbod_pwd}%f%b${git_info:+${(e)git_info[prompt]}}%(!. %F{red}#%f.) [%F{cyan}%*%f]
+%B%F{green}%n%f%b at %B%F{yellow}%m%f%b in %B%F{magenta}${_prompt_kepbod_pwd}%f%b${git_info:+${(e)git_info[prompt]}} $python_info[virtualenv] [%F{cyan}%*%f]
 ${editor_info[keymap]} '
   RPROMPT='${editor_info[overwrite]}%(?:: %F{red}⏎%f)${VIM:+" %B%F{green}V%f%b"}${git_info[rprompt]}'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '

@@ -32,6 +32,7 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'editor' \
   'git' \
+  'python' \
   'ssh' \
   'history' \
   'syntax-highlighting' \
