@@ -33,7 +33,6 @@ zstyle ':prezto:load' pmodule \
   'editor' \
   'git' \
   'python' \
-  'ssh' \
   'history' \
   'syntax-highlighting' \
   'history-substring-search' \
