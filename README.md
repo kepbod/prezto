@@ -5,9 +5,8 @@ Prezto is the configuration framework for [Zsh][1]; it enriches the command line
 interface environment with sane defaults, aliases, functions, auto completion,
 and prompt themes.
 
-This Repository forked here is to integrate with [iztv][2] framework. It owns some
-modifications to make it more easy and beautiful to use in the [iztv][2] framework.
-It will be synchronized with the Prezto master branch to obtain the newest
+It is a fork of [Prezto][2] with some modifications to facilitate zsh usage, and it
+will be synchronized with the Prezto master branch to obtain the newest
 features.
 
 ![snapshot](https://raw.githubusercontent.com/kepbod/prezto/master/snapshot.jpg)
@@ -43,7 +42,7 @@ License
 
 (The MIT License)
 
-Copyright (c) 2009-2013 Robby Russell, Sorin Ionescu, and contributors.
+Copyright (c) 2009-2015 Robby Russell, Sorin Ionescu, and contributors.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -64,6 +63,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [1]: http://www.zsh.org
-[2]: https://github.com/kepbod/iztv
+[2]: https://github.com/sorin-ionescu/prezto
 [3]: http://www.bash2zsh.com/zsh_refcard/refcard.pdf
 [4]: http://grml.org/zsh/zsh-lovers.html
