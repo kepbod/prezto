@@ -85,12 +85,12 @@ prompt_pure_preprompt_render() {
 	local git_color=242
 	[[ -n ${prompt_pure_git_last_dirty_check_timestamp+x} ]] && git_color=red
 
-	# construct prompt, beginning with username and machine if applicable
-	local prompt=$prompt_pure_username
-	# path
-	prompt+="%F{blue}%~%f"
+	# construct prompt, beginning with path
+	local prompt="%F{blue}%~%f"
+	# username and machine if applicable
+	prompt+=$prompt_pure_username
 	# python info
-	prompt+="%F{150}$python_info[virtualenv]%f"
+	prompt+="%F{242}$python_info[virtualenv]%f"
 	# git info
 	prompt+="%F{$git_color}${vcs_info_msg_0_}${prompt_pure_git_dirty}%f"
 	# git pull/push arrows
@@ -267,13 +267,13 @@ prompt_pure_setup() {
 	zstyle ':vcs_info:git*' actionformats ' %b|%a'
 
 	# show username@host if logged in through SSH
-	[[ "$SSH_CONNECTION" != '' ]] && prompt_pure_username='%F{242}%n@%m%f '
+	[[ "$SSH_CONNECTION" != '' ]] && prompt_pure_username=' %F{242}%n@%m%f'
 
 	# show username@host if root, with username in white
-	[[ $UID -eq 0 ]] && prompt_pure_username='%F{white}%n%f%F{242}@%m%f '
+	[[ $UID -eq 0 ]] && prompt_pure_username=' %F{white}%n%f%F{242}@%m%f'
 
 	# set python info
-	zstyle ':prezto:module:python:info:virtualenv' format ' (ENV:%v)'
+	zstyle ':prezto:module:python:info:virtualenv' format ' %v'
 
 	# set editor info
 	zstyle ':prezto:module:editor:info:keymap:primary'   format "❯%f"
