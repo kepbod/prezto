@@ -270,6 +270,15 @@ for keymap in 'emacs' 'viins'; do
   bindkey -M "$keymap" "$key_info[Left]" backward-char
   bindkey -M "$keymap" "$key_info[Right]" forward-char
 
+  # Moving
+  bindkey -M "$keymap" "$key_info[Control]N" history-substring-search-down
+  bindkey -M "$keymap" "$key_info[Control]P" history-substring-search-up
+  bindkey -M "$keymap" "$key_info[Control]A" beginning-of-line
+  bindkey -M "$keymap" "$key_info[Control]E" end-of-line
+  bindkey -M "$keymap" "$key_info[Control]F" emacs-forward-word
+  bindkey -M "$keymap" "$key_info[Control]B" emacs-backward-word
+  bindkey -M "$keymap" "$key_info[Control]W" backward-kill-word
+
   # Expand history on space.
   bindkey -M "$keymap" ' ' magic-space
 
