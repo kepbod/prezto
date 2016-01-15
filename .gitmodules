@@ -10,6 +10,9 @@
 [submodule "modules/prompt/external/powerline"]
 	path = modules/prompt/external/powerline
 	url = git://github.com/davidjrice/prezto_powerline.git
-[submodule "modules/prompt/external/pure"]
+[submodule "modules/prompt/external/agnoster"]
+	path = modules/prompt/external/agnoster
+	url = git://github.com/agnoster/agnoster-zsh-theme.git
+[submodule "modules/prompt/functions/pure"]
 	path = modules/prompt/external/pure
 	url = git://github.com/sindresorhus/pure.git

@@ -68,8 +68,7 @@ zstyle ':prezto:module:prompt' theme 'pure'
 zstyle ':prezto:module:syntax-highlighting' highlighters \
   'main' \
   'brackets' \
-  'pattern' \
-  'root'
+  'cursor'
 
 #
 # Terminal
