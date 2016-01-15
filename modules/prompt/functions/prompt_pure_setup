@@ -100,6 +100,9 @@ prompt_pure_set_title() {
 }
 
 prompt_pure_preexec() {
+	# attempt to detect and prevent prompt_pure_async_git_fetch from interfering with user initiated git or hub fetch
+	[[ $2 =~ (git|hub)\ .*(pull|fetch) ]] && async_flush_jobs 'prompt_pure'
+
 	prompt_pure_cmd_timestamp=$EPOCHSECONDS
 
 	# shows the current dir and executed command in the title while a process is active
@@ -227,7 +230,7 @@ prompt_pure_async_git_dirty() {
 	local untracked_dirty=$1; shift
 
 	# use cd -q to avoid side effects of changing directory, e.g. chpwd hooks
-	cd -q "$*"
+	builtin cd -q "$*"
 
 	if [[ "$untracked_dirty" == "0" ]]; then
 		command git diff --no-ext-diff --quiet --exit-code
@@ -240,7 +243,7 @@ prompt_pure_async_git_dirty() {
 
 prompt_pure_async_git_fetch() {
 	# use cd -q to avoid side effects of changing directory, e.g. chpwd hooks
-	cd -q "$*"
+	builtin cd -q "$*"
 
 	# set GIT_TERMINAL_PROMPT=0 to disable auth prompting for git fetch (git 2.3+)
 	GIT_TERMINAL_PROMPT=0 command git -c gc.auto=0 fetch

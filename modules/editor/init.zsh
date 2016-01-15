@@ -277,7 +277,6 @@ for keymap in 'emacs' 'viins'; do
   bindkey -M "$keymap" "$key_info[Control]E" end-of-line
   bindkey -M "$keymap" "$key_info[Control]F" emacs-forward-word
   bindkey -M "$keymap" "$key_info[Control]B" emacs-backward-word
-  bindkey -M "$keymap" "$key_info[Control]W" backward-kill-word
 
   # Expand history on space.
   bindkey -M "$keymap" ' ' magic-space
