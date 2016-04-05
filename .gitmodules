@@ -18,4 +18,4 @@
 	url = git://github.com/sindresorhus/pure.git
 [submodule "modules/autosuggestions/external"]
 	path = modules/autosuggestions/external
-	url = git://github.com/tarruda/zsh-autosuggestions
+	url = git://github.com/zsh-users/zsh-autosuggestions.git
