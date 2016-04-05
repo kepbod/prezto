@@ -12,4 +12,4 @@ fi
 
 # Setup virtualenv
 export PROJECT_HOME="$HOME"
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS="--no-site-packages"
+# export VIRTUALENVWRAPPER_VIRTUALENV_ARGS="--no-site-packages"

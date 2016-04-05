@@ -36,9 +36,17 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'autosuggestions' \
   'prompt' \
   'spectrum' \
   'terminal'
+
+#
+# Autosuggestions
+#
+
+# Set the query found color.
+zstyle ':prezto:module:autosuggestions:color' found ''
 
 #
 # Editor
@@ -68,7 +76,16 @@ zstyle ':prezto:module:prompt' theme 'pure'
 zstyle ':prezto:module:syntax-highlighting' highlighters \
   'main' \
   'brackets' \
-  'cursor'
+  'pattern' \
+  'line' \
+  'cursor' \
+  'root'
+
+# Set syntax highlighting styles.
+zstyle ':prezto:module:syntax-highlighting' styles \
+  'builtin' 'bg=blue' \
+  'command' 'bg=blue' \
+  'function' 'bg=blue'
 
 #
 # Terminal
