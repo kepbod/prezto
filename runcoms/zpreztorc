@@ -35,12 +35,9 @@ MODULES_TO_LOAD=(
 'prompt'
 'spectrum'
 'terminal'
-'tmux'
 )
 if [[ $(uname -s) == "Darwin" ]]; then
     MODULES_TO_LOAD+=('homebrew' 'osx')
-else
-    MODULES_TO_LOAD+=('ssh')
 fi
 zstyle ':prezto:load' pmodule ${MODULES_TO_LOAD[@]}
 
@@ -103,12 +100,3 @@ zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
 
 # Set the tab title format.
 zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
-
-#
-# Tmux
-#
-
-# Integrate with iTerm2.
-if [[ $(uname -s) == "Darwin" ]]; then
-    zstyle ':prezto:module:tmux:iterm' integrate 'yes'
-fi
