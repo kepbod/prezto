@@ -52,7 +52,7 @@ backup() {
 install() {
     color_print "Cloning prezto..."
     rm -rf $HOME/.zprezto
-    git clone --recursive git://github.com/kepbod/prezto.git $HOME/.zprezto
+    git clone --recursive https://github.com/kepbod/prezto.git $HOME/.zprezto
     for i in $HOME/.zprezto/runcoms/z{login,logout,preztorc,profile,shenv}; do
         ln -s $i ${i/zprezto\/runcoms\//}
     done
