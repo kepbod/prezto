@@ -4,6 +4,7 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #   Sebastian Wiesner <lunaryorn@googlemail.com>
+#   Patrick Bos <egpbos@gmail.com>
 #
 
 # Load manually installed pyenv into the shell session.
@@ -35,14 +36,21 @@ if (( ! $+commands[python] && ! $+commands[pyenv] )); then
 fi
 
 # Load virtualenvwrapper into the shell session.
-if (( $+commands[virtualenvwrapper.sh] )); then
-  # Set the directory where virtual environments are stored.
-  export WORKON_HOME="$HOME/.virtualenvs"
+# ...only if not using conda, since the two are expected to clash
+if (( ! $+commands[conda] )); then
+  if (( $+commands[virtualenvwrapper.sh] )); then
+    # Set the directory where virtual environments are stored.
+    export WORKON_HOME="$HOME/.virtualenvs"
 
-  # Disable the virtualenv prompt.
-  VIRTUAL_ENV_DISABLE_PROMPT=1
+    # Disable the virtualenv prompt.
+    VIRTUAL_ENV_DISABLE_PROMPT=1
 
-  source "$commands[virtualenvwrapper.sh]"
+    source "$commands[virtualenvwrapper.sh]"
+  fi
+else
+  if (( $(conda ..changeps1) )); then
+    echo "To make sure Conda doesn't change your prompt (should do that in the prompt module) run:\n  conda config --set changeps1 false"
+  fi
 fi
 
 #
