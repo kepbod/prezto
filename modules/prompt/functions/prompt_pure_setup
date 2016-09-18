@@ -339,6 +339,8 @@ prompt_pure_setup() {
 
 	zmodload zsh/datetime
 	zmodload zsh/zle
+	zmodload zsh/parameter
+
 	autoload -Uz add-zsh-hook
 	autoload -Uz vcs_info
 	autoload -Uz async && async
