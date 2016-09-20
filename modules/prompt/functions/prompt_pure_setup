@@ -197,10 +197,10 @@ prompt_pure_preprompt_render() {
 		# modify previous preprompt
 		print -Pn "${clr_prev_preprompt}\e[${lines}A\e[${COLUMNS}D${preprompt}${clr}\n"
 
-	if [[ $prompt_subst_status = 'on' ]]; then
-		# re-eanble prompt_subst for expansion on PS1
-		setopt prompt_subst
-	fi
+		if [[ $prompt_subst_status = 'on' ]]; then
+			# re-eanble prompt_subst for expansion on PS1
+			setopt prompt_subst
+		fi
 
 		# redraw prompt (also resets cursor position)
 		zle && zle .reset-prompt
