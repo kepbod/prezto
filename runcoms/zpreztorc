@@ -35,11 +35,19 @@ MODULES_TO_LOAD=(
 'prompt'
 'spectrum'
 'terminal'
+'deer'
 )
 if [[ $(uname -s) == "Darwin" ]]; then
     MODULES_TO_LOAD+=('homebrew' 'osx')
 fi
 zstyle ':prezto:load' pmodule ${MODULES_TO_LOAD[@]}
+
+#
+# Deer
+#
+
+# Set key bindings
+zstyle ':prezto:module:deer' key-bindings '^k'
 
 #
 # Autosuggestions

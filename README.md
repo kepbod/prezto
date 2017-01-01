@@ -1,9 +1,13 @@
+[![Gitter](https://badges.gitter.im/zsh-users/prezto.svg)](https://gitter.im/zsh-users/prezto?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 Prezto — Instantly Awesome Zsh
 ==============================
 
 Prezto is the configuration framework for [Zsh][1]; it enriches the command line
 interface environment with sane defaults, aliases, functions, auto completion,
-and prompt themes.
+and prompt themes. 
+
+This repository is being actively maintained by a community of users. 
 
 It is a fork of [Prezto][2] with some modifications to facilitate zsh usage, and it
 will be synchronized with the Prezto master branch to obtain the newest
@@ -65,6 +69,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [1]: http://www.zsh.org
-[2]: https://github.com/sorin-ionescu/prezto
+[2]: https://github.com/zsh-users/prezto
 [3]: http://www.bash2zsh.com/zsh_refcard/refcard.pdf
 [4]: http://grml.org/zsh/zsh-lovers.html
