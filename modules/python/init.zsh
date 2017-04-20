@@ -45,16 +45,6 @@ if (( $? && $+commands[virtualenvwrapper.sh] )); then
     VIRTUAL_ENV_DISABLE_PROMPT=1
 
     source "$commands[virtualenvwrapper.sh]"
-  fi
-else
-  if (( $(conda ..changeps1) )); then
-    echo "To make sure Conda doesn't change your prompt (should do that in the prompt module) run:\n  conda config --set changeps1 false"
-    # TODO:
-    # We could just run this ourselves. In an exit hook
-    # (add zsh-hook zshexit [(anonymous) function]) we could then set it back
-    # to the way it was before we changed it. However, I'm not sure if this is
-    # exception safe, so left it like this for now.
-  fi
 fi
 
 #
