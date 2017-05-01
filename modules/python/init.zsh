@@ -64,7 +64,6 @@ if (( $+commands[pip] )); then
   source "$cache_file"
 
   unset cache_file
->>>>>>> 46a1ffaf7e9a3cddc12f5b88eeee1d94e5f02a47
 fi
 
 #
