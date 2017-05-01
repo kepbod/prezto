@@ -1,5 +1,3 @@
-[![Gitter](https://badges.gitter.im/zsh-users/prezto.svg)](https://gitter.im/zsh-users/prezto?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 Prezto — Instantly Awesome Zsh
 ==============================
 
