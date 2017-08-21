@@ -9,7 +9,7 @@ It is a fork of [Prezto][2] with some modifications to facilitate zsh usage, and
 will be synchronized with the Prezto master branch to obtain the newest
 features.
 
-![snapshot](https://raw.githubusercontent.com/kepbod/prezto/master/snapshot.jpg)
+![snapshot](https://raw.githubusercontent.com/kepbod/prezto/kepbod/snapshot.jpg)
 
 Installation
 ---------
