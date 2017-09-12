@@ -17,13 +17,13 @@ Installation
 **via 'curl'**
 
 ```bash
-bash <(curl -L https://raw.githubusercontent.com/kepbod/prezto/master/setup.sh) -i
+bash <(curl -L https://raw.githubusercontent.com/kepbod/prezto/kepbod/setup.sh) -i
 ```
 
 **via 'wget'**
 
 ```bash
-bash <(wget --no-check-certificate https://raw.githubusercontent.com/kepbod/prezto/master/setup.sh -O -) -i
+bash <(wget --no-check-certificate https://raw.githubusercontent.com/kepbod/prezto/kepbod/setup.sh -O -) -i
 ```
 
 Updating
